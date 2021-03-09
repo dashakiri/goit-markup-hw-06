@@ -361,7 +361,7 @@ img {
 }
 
 .textarea::placeholder {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -371,7 +371,7 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox {
+.checkbox-label {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -383,22 +383,16 @@ img {
 }
 
 .check-icon {
+  display: inline-block;
   border: 1px solid var(--secondary-color-headings);
   border-radius: 2px;
-  cursor: pointer;
 }
 
 .check-icon use {
   display: none;
 }
 
-.checkbox:hover .check-icon,
-.checkbox:focus .check-icon {
-  border: none;
-}
-
-.checkbox:hover use,
-.checkbox:focus use {
+.checkbox:checked + .check-icon use {
   display: block;
 }
 
@@ -867,7 +861,7 @@ img {
 }
 
 #mail::placeholder {
-  font-family: Roboto;
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
